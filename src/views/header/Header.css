@@ -1,0 +1,58 @@
+#navbar{
+  background-color: #37517ed9;
+  transition: 500ms ease all;
+}
+
+.nav-link.active{
+  color: #73c5eb !important;
+}
+
+#navbar .navbar-brand{
+  letter-spacing: 2px;
+}
+
+#navbar.transparent{
+  background-color: transparent;
+}
+
+#navbar.transparent a{
+  color: white;
+}
+
+#navbar a{
+ color: white;
+}
+
+#mobile-navbar .navbar-toggler{
+  float: right;
+  border: none;
+}
+
+#mobile-navbar .navbar-toggler:focus{
+  box-shadow: none;
+}
+
+/* TOGGLER COLOR WHITE */
+#mobile-navbar .navbar-toggler-icon{
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#mobile-navbar .navbar-collapse{
+  display: block;
+  position: fixed;
+  top: 54px;
+  padding: 20px 30px;
+  width: 100%;
+  transition: left 700ms ease;
+  background-color: rgba(67, 4, 125);
+  width: 60%;
+  border: none;
+}
+
+#mobile-navbar .navbar-collapse.show{
+  left: 0;
+}
+
+#mobile-navbar .navbar-collapse.hidden{
+  left: -60%
+}

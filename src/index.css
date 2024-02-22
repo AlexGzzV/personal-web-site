@@ -1,13 +1,64 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.section-bg {
+  background-color: #f3f5fa;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #37517e;
+}
+
+a:hover {
+  color: #73c5eb !important;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: Jost;
+  src: url(/public/fonts/Jost/Jost-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(/public/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(/public/fonts/Poppins/Poppins-Medium.ttf);
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Jost", sans-serif;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--bs-heading-color);
+}
+
+a {
+  color: #47b2e4;
+  text-decoration: none !important;
+}
+
+body{
+  font-family: "Open Sans", sans-serif !important;
+}
+
+section{
+  padding: 60px 0;
+  overflow: hidden;
 }
