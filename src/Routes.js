@@ -1,8 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Aos from 'aos';
+import GlobalContextProvider from "./context/GlobalContextProvider";
 import Home from "./views/home/Home";
 import Header from "./views/header/Header";
+import Footer from "./views/footer/footer";
 
 const ReactRoutes = () => {
   Aos.init({
@@ -14,10 +16,13 @@ const ReactRoutes = () => {
 
   return(
     <div>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <GlobalContextProvider>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <Footer />
+      </GlobalContextProvider>
     </div>
   )
 }

@@ -96,6 +96,9 @@ const Header = (props) => {
             <NavItem>
               <NavLink className="scrollto" href="#services">Servicios</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink className="scrollto" href="#paquetes">Paquetes</NavLink>
+            </NavItem>
           </Nav>
         </Container>
         :<Container id='mobile-navbar'>
@@ -111,6 +114,9 @@ const Header = (props) => {
               </NavItem>
               <NavItem>
                 <NavLink className="scrollto" href="#services">Servicios</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink className="scrollto" href="#paquetes">Paquetes</NavLink>
               </NavItem>
               {/* <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

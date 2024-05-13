@@ -12,23 +12,23 @@ const Services = (props) => {
           <h2>NUESTROS SERVICIOS</h2>
         </div>
         <Row>
-          <Col className="align-items-stretch d-flex" data-aos="zoom-in" data-aos-delay="100" lg={4}>
-            <div class="icon-box">
-              <div class="icon"><Icon color="#47b2e4" icon="streamline:web" /></div>
+          <Col className="align-items-stretch d-flex" data-aos="fade-up" data-aos-delay="100" lg={4}>
+            <div className="icon-box">
+              <div className="icon"><Icon color="#47b2e4" icon="streamline:web" /></div>
               <h4><a href="">Sitios Web</a></h4>
               <p>Sitios Web adaptados a tus necesidades para atraer y mantener a tus clientes</p>
             </div>
           </Col>
           <Col className="align-items-stretch d-flex mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200" lg={4}>
-            <div class="icon-box">
-              <div class="icon"><Icon color="#47b2e4" icon="material-symbols:mail-outline" /></div>
+            <div className="icon-box">
+              <div className="icon"><Icon color="#47b2e4" icon="material-symbols:mail-outline" /></div>
               <h4><a href="">Correos Personalizados</a></h4>
               <p>Ofrecemos correos personalizados para que tu negocio sea más profesional</p>
             </div>
           </Col>
-          <Col className="align-items-stretch d-flex mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="300" lg={4}>
-            <div class="icon-box">
-              <div class="icon"><Icon color="#47b2e4" icon="bx-cloud" /></div>
+          <Col className="align-items-stretch d-flex mt-4 mt-md-0" data-aos="fade-down" data-aos-delay="300" lg={4}>
+            <div className="icon-box">
+              <div className="icon"><Icon color="#47b2e4" icon="bx-cloud" /></div>
               <h4><a href="">Servicios en la Nube</a></h4>
               <p>Con los servicios en la nube, tendrás muchas más facilidades para impulsar tu negocio</p>
             </div>

@@ -4,6 +4,7 @@ import { Container } from "reactstrap";
 import Banner from "../../components/home/banner/BannerComponent";
 import About from "../../components/home/about/AboutComponent";
 import Services from "../../components/home/services/ServicesComponent";
+import Paquetes from "../../components/home/paquetes/PaquetesComponent";
 
 const Home = () => {
   return(
@@ -12,6 +13,7 @@ const Home = () => {
       <main>
         <About />
         <Services />
+        <Paquetes />
       </main>
     </>
   )
