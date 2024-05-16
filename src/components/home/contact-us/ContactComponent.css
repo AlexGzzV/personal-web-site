@@ -1,0 +1,14 @@
+.contact-us form .btn{
+  background-color: #37517ed9;
+  border-color: #37517ed9;
+}
+
+.contact-us form .btn:active{
+  background-color: #44649bd9;
+  border-color: #44649bd9;
+}
+
+.contact-us form .btn:focus{
+  color: white;
+  box-shadow: none;
+}

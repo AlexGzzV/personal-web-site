@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react';
 const Card = (props) => {
 
   return(
-    <div className="card-box">
+    <div className="card-box mb-2">
       <div className="header-card">
         <h4><a href="">{props.data.name}</a></h4>
       </div>

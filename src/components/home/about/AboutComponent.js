@@ -13,7 +13,7 @@ const About = (props) => {
         <Row className="content">
           <Col data-aos="fade-right" lg={4}>
             <p>
-              Somos un equipo de desarrolladores y diseñadores expertos en el desarrollo de aplicaciones Web,
+              En Aegis Systems (Aegis: escudo mítico de Zeus y Atenea, simbolizando protección y poder), somos un equipo de desarrolladores y diseñadores expertos en el desarrollo de aplicaciones Web,
               trabajamos para brindar el mejor servicio para tu negocio y mejorar la exposición digital de tu empresa.
             </p>
           </Col>

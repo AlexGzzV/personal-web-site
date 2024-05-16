@@ -1,1 +1,1 @@
-publicar firebase app = firebase deploy
+publish firebase app = firebase deploy

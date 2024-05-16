@@ -1,0 +1,8 @@
+footer{
+  background-color: #37517e;
+  color: white !important;
+}
+
+footer .flex-column li a{
+  color: white !important;
+}
