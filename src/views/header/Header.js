@@ -86,7 +86,7 @@ const Header = (props) => {
         (windowWidth >= 900)
         ?<Container id='desktop-navbar'>
           <Nav>
-            <Link to='/' className='navbar-brand me-auto'>{/*<img src='/LOGOTIPO2.png' width={30}/>*/}<span>ATG SOLUTIONS</span></Link>
+            <Link to='/' className='navbar-brand me-auto'>{/*<img src='/LOGOTIPO2.png' width={30}/>*/}<span>AEGIS SYSTEMS</span></Link>
             <NavItem>
               <NavLink className="scrollto" href='#home'>Inicio</NavLink>
             </NavItem>
@@ -99,12 +99,16 @@ const Header = (props) => {
             <NavItem>
               <NavLink className="scrollto" href="#paquetes">Paquetes</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink className="scrollto" href="#contact-us">Contáctanos</NavLink>
+            </NavItem>
           </Nav>
         </Container>
         :<Container id='mobile-navbar'>
-          <NavbarBrand href="/">{/*<img src='/LOGOTIPO2.png' width={30}/>*/}<span>ATG SOLUTIONS</span></NavbarBrand>
+          <NavbarBrand href="/">{/*<img src='/LOGOTIPO2.png' width={30}/>*/}<span>AEGIS SYSTEMS</span></NavbarBrand>
           <NavbarToggler color='#FFF' onClick={toggle} />
           <Collapse className={isOpen ? 'show' : 'hidden'} navbar>
+            <div className="overlay" onClick={toggle}></div>
             <Nav className="me-auto" pills navbar>
               <NavItem>
                 <NavLink className='scrollto' href="#home">Inicio</NavLink>
@@ -118,17 +122,9 @@ const Header = (props) => {
               <NavItem>
                 <NavLink className="scrollto" href="#paquetes">Paquetes</NavLink>
               </NavItem>
-              {/* <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Option 1</DropdownItem>
-                  <DropdownItem>Option 2</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown> */}
+              <NavItem>
+                <NavLink className="scrollto" href="#contact-us">Contáctanos</NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Container>
