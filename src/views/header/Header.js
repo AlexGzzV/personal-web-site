@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import {
   Collapse,
-  Col,
   Container,
   Navbar,
   NavbarToggler,
@@ -11,10 +10,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
 } from 'reactstrap';
 
 const Header = (props) => {
@@ -45,8 +40,9 @@ const Header = (props) => {
      */
     let navbarlinks = select('#navbar .scrollto', true);
     const navbarlinksActive = () => {
-      let position = window.scrollY + 43;
+      let position = window.scrollY + 57;
       navbarlinks.forEach(navbarlink => {
+        navbarlink.addEventListener('click', e => {scrollTo(e)})
         if (!navbarlink.hash) return
         let section = select(navbarlink.hash)
         if (!section) return
@@ -73,12 +69,25 @@ const Header = (props) => {
     onscroll(document, navbarlinksActive);
     window.addEventListener('resize', windowResize);
 
+
+
     return(()=>{
       window.removeEventListener('load', navbarlinksActive);
       document.removeEventListener('scroll', navbarlinksActive);
       window.removeEventListener('resize', windowResize);
+
+      let navbarlinks = select('#navbar .scrollto', true);
+      navbarlinks.forEach(navbarlink => {
+        navbarlink.removeEventListener('click', scrollTo);
+      });
     })
   },[]);
+
+  const scrollTo = (e) => {
+    e.preventDefault();
+    const scroll = document.getElementById(e.target.getAttribute('href').replace('#', '')).offsetTop;
+    window.scrollTo(0, scroll - 56);
+  }
 
   return(
     <Navbar id="navbar" className='transparent' {...props} fixed="top">
@@ -86,15 +95,18 @@ const Header = (props) => {
         (windowWidth >= 900)
         ?<Container id='desktop-navbar'>
           <Nav>
-            <Link to='/' className='navbar-brand me-auto'>{/*<img src='/LOGOTIPO2.png' width={30}/>*/}<span>AEGIS SYSTEMS</span></Link>
+            <Link to='/' className='navbar-brand me-auto'><img src='/logo.png' width={50}/><span>AEGIS SYSTEMS</span></Link>
             <NavItem>
               <NavLink className="scrollto" href='#home'>Inicio</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="scrollto" href="#about">Nosotros</NavLink>
+              <NavLink className="scrollto" href="#about">Quiénes somos</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="scrollto" href="#services">Servicios</NavLink>
+              <NavLink className="scrollto" href="#conocenos">Conocenos</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className="scrollto" href="#why-us">¿Por qué nosotros?</NavLink>
             </NavItem>
             <NavItem>
               <NavLink className="scrollto" href="#paquetes">Paquetes</NavLink>
@@ -105,7 +117,7 @@ const Header = (props) => {
           </Nav>
         </Container>
         :<Container id='mobile-navbar'>
-          <NavbarBrand href="/">{/*<img src='/LOGOTIPO2.png' width={30}/>*/}<span>AEGIS SYSTEMS</span></NavbarBrand>
+          <NavbarBrand href="/"><img src='/logo.png' width={50}/><span>AEGIS SYSTEMS</span></NavbarBrand>
           <NavbarToggler color='#FFF' onClick={toggle} />
           <Collapse className={isOpen ? 'show' : 'hidden'} navbar>
             <div className="overlay" onClick={toggle}></div>
@@ -114,10 +126,13 @@ const Header = (props) => {
                 <NavLink className='scrollto' href="#home">Inicio</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="scrollto" href="#about">Nosotros</NavLink>
+                <NavLink className="scrollto" href="#about">Quiénes somos</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="scrollto" href="#services">Servicios</NavLink>
+                <NavLink className="scrollto" href="#conocenos">Conocenos</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink className="scrollto" href="#why-us">Por qué nosotros?</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink className="scrollto" href="#paquetes">Paquetes</NavLink>

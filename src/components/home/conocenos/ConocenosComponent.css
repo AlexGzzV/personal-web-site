@@ -1,0 +1,24 @@
+.conocenos .card{
+  width: 100%;
+}
+
+.conocenos .card .top-color-background{
+  height: 150px;
+  background-color: #37517ed9;
+  border-radius: 0.375rem 0.375rem 0 0;
+}
+
+.conocenos .card img{
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: translateY(-75px);
+}
+
+.conocenos .card h5,
+.conocenos .card h6{
+  transform: translateY(-25px);
+}

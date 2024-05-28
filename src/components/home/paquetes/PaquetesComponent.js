@@ -32,7 +32,7 @@ const Paquetes = (props) => {
   }
 
   return(
-    <section id="paquetes" className="paquetes">
+    <section id="paquetes" className="paquetes section-bg">
       <Container>
       <div data-aos="fade-up" className="section-title">
           <h2>CONOCE NUESTROS PAQUETES</h2>

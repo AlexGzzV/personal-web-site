@@ -15,6 +15,10 @@ body:has(#mobile-navbar .navbar-collapse.show){
   letter-spacing: 2px;
 }
 
+#navbar .navbar-brand img{
+  margin-right: 10px;
+}
+
 #navbar.transparent{
   background-color: transparent;
 }

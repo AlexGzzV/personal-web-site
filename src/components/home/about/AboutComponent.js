@@ -8,31 +8,32 @@ const About = (props) => {
     <section id="about" className="about">
       <Container>
         <div data-aos="fade-up" className="section-title">
-          <h2>SOBRE NOSOTROS</h2>
+          <h2>QUIÉNES SOMOS</h2>
         </div>
         <Row className="content">
-          <Col data-aos="fade-right" lg={4}>
+          <Col className="mx-auto" data-aos="fade-right" lg={6}>
             <p>
-              En Aegis Systems (Aegis: escudo mítico de Zeus y Atenea, simbolizando protección y poder), somos un equipo de desarrolladores y diseñadores expertos en el desarrollo de aplicaciones Web,
-              trabajamos para brindar el mejor servicio para tu negocio y mejorar la exposición digital de tu empresa.
+              Somos un grupo de jóvenes apasionados por la tecnología y el diseño, unidos por un sueño común: transformar ideas en experiencias digitales extraordinarias. 
+              En AEGIS SYSTEMS, nos especializamos en el desarrollo de páginas web innovadoras y personalizadas, combinando creatividad y experiencia técnica para llevar tu visión al mundo en línea.
+            </p>
+            <p>
+              Cada miembro de nuestro equipo aporta una perspectiva única y especializada. Desde diseñadores gráficos hasta desarrolladores de software, 
+              todos compartimos un entusiasmo contagioso por lo que hacemos. Creemos que cada proyecto es una oportunidad para aprender, crecer y crear algo realmente especial.
+            </p>
+            <p>
+              Nosotros no solo construimos sitios web, sino que también construimos relaciones. Escuchamos atentamente tus necesidades, entendemos tus objetivos y trabajamos codo a codo contigo para asegurar que cada detalle refleje tu esencia y valores. 
+              Nuestro compromiso es ofrecerte soluciones digitales que no solo cumplan, sino que superen tus expectativas.
             </p>
           </Col>
-          <Col data-aos="fade-right" lg={4}>
-            <div className="c-center">
-              <p>¿Por qué nosotros?</p>
-              <ul>
-                <li><Icon color="#47b2e4" icon="ri-check-double-line" /> Servicios de confianza</li>
-                <li><Icon color="#47b2e4" icon="ri-check-double-line" /> Trato profesional</li>
-                <li><Icon color="#47b2e4" icon="ri-check-double-line" /> Precios accesibles</li>
-              </ul>
-            </div>
-          </Col>
-          <Col data-aos="fade-left" lg={4}>
+          <Col className="mx-auto" data-aos="fade-right" lg={6}>
             <p>
-              Utilizamos las mejores herramientas en el mercado para satisfacer las necesidades de nuestros clientes,
-              te aseguramos calidad y estabilidad en cada uno de nuestros servicios que tenemos para ti.
+              En AEGIS SYSTEMS, la innovación y la calidad son nuestro sello distintivo. Estamos aquí para ayudarte a destacar en el mundo digital, 
+              ofreciéndote un servicio personalizado y una experiencia colaborativa que hará que tu proyecto sea tan único como tú.
             </p>
-            {/* <a href="#" class="btn-learn-more">Saber más</a> */}
+            <p>
+              Gracias por confiar en nosotros y permitirnos ser parte de tu viaje digital.
+            </p>
+            <p>El equipo de AEGIS SYSTEMS - Tu socio en innovación digital.</p>
           </Col>
         </Row>
       </Container>

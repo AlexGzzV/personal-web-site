@@ -9,19 +9,26 @@ const Contact = (props) => {
   }
 
   return(
-    <section id="contact-us" className="contact-us section-bg">
+    <section id="contact-us" className="contact-us">
       <Container>
-        <div data-aos="fade-up" className="section-title">
+        <div className="section-title">
           <h2>CONTÁCTANOS</h2>
         </div>
         <Row>
-          <Col lg={6} data-aos="slide-right">
+          <Col lg={6}>
            <div>
-            <h2>Contáctanos</h2>
-            <p>Envíanos tu información y en breve nos estaremos comunicando contigo.</p>
+            <h2>¡Conéctate con Nosotros!</h2>
+            {/* <p>En AEGIS SYSTEMS, estamos emocionados de saber de ti. Tu visión y tus necesidades son nuestra prioridad, y queremos asegurarnos de que recibas la atención personalizada que mereces.</p> */}
+            <p>
+              ¿Tienes una idea brillante para un proyecto web? ¿Necesitas asistencia técnica o simplemente quieres conocer más sobre nuestros servicios? 
+              No dudes en ponerte en contacto con nosotros. Nuestro equipo de profesionales está aquí para responder a tus preguntas y ayudarte a dar el siguiente paso hacia el éxito digital.
+            </p>
+            <p>Regístrate y completa nuestro formulario de contacto. Es fácil y rápido, y nos permitirá ofrecerte la solución perfecta, adaptada a tus objetivos.</p>
+            <p>¿Por qué esperar? Conéctate con nosotros hoy y juntos haremos realidad tus ideas.</p>
+            <p>AEGIS SYSTEMS - Tu socio en innovación digital.</p>
            </div>
           </Col>
-          <Col lg={6} data-aos="slide-left">
+          <Col lg={6}>
             <form onSubmit={handleSubmit}>
               <FormGroup floating>
                 <Input type="text" name="name" placeholder="Nombre completo" />

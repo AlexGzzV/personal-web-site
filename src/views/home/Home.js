@@ -3,7 +3,8 @@ import './Home.css';
 import { Container } from "reactstrap";
 import Banner from "../../components/home/banner/BannerComponent";
 import About from "../../components/home/about/AboutComponent";
-import Services from "../../components/home/services/ServicesComponent";
+import Conocenos from "../../components/home/conocenos/ConocenosComponent";
+import WhyUs from "../../components/home/why-us/WhyUsComponent";
 import Paquetes from "../../components/home/paquetes/PaquetesComponent";
 import Contact from "../../components/home/contact-us/ContactComponent";
 
@@ -13,7 +14,8 @@ const Home = () => {
       <Banner />
       <main>
         <About />
-        <Services />
+        <Conocenos />
+        <WhyUs />
         <Paquetes />
         <Contact />
       </main>
