@@ -7,11 +7,11 @@ const Banner = (props) => {
     <section id="home">
       <Container>
         <Row>
-          <Col data-aos="fade-up" className="col1" lg={6}>
+          <Col className="d-flex flex-column justify-content-center" lg={6}>
             <h1>AEGIS SYSTEMS</h1>
             <h2>Las Mejores Soluciones Para Tu Negocio</h2>
           </Col>
-          <Col data-aos="fade-down" className="col2" lg={6}>
+          <Col className="col2" lg={6}>
             <img className="animated" src="/images/hero-img.png"/>
           </Col>
         </Row>

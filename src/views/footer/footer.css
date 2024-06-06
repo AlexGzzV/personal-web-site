@@ -1,8 +1,13 @@
 footer{
-  background-color: #37517e;
+  background-color: var(--main-bg-color);
   color: white !important;
 }
 
 footer .flex-column li a{
+  color: white !important;
+}
+
+footer h5,
+footer p{
   color: white !important;
 }

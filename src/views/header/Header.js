@@ -52,12 +52,6 @@ const Header = (props) => {
           navbarlink.classList.remove('active')
         }
       })
-
-      if(window.scrollY < 200){
-        document.getElementById('navbar').classList.add('transparent');
-      }else{
-        document.getElementById('navbar').classList.remove('transparent');
-      }
     }
 
     const windowResize = () => {
@@ -90,26 +84,26 @@ const Header = (props) => {
   }
 
   return(
-    <Navbar id="navbar" className='transparent' {...props} fixed="top">
+    <Navbar id="navbar" {...props} fixed="top">
       {
         (windowWidth >= 900)
         ?<Container id='desktop-navbar'>
           <Nav>
-            <Link to='/' className='navbar-brand me-auto'><img src='/logo.png' width={50}/><span>AEGIS SYSTEMS</span></Link>
-            <NavItem>
+            <Link to='/' className='navbar-brand me-auto'><img src='/logo.png' width={30}/><span>AEGIS SYSTEMS</span></Link>
+            {/* <NavItem>
               <NavLink className="scrollto" href='#home'>Inicio</NavLink>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
               <NavLink className="scrollto" href="#about">Quiénes somos</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink className="scrollto" href="#conocenos">Conocenos</NavLink>
             </NavItem>
             <NavItem>
               <NavLink className="scrollto" href="#why-us">¿Por qué nosotros?</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="scrollto" href="#paquetes">Paquetes</NavLink>
+              <NavLink className="scrollto" href="#conocenos">Conocenos</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className="scrollto" href="#services">Servicios</NavLink>
             </NavItem>
             <NavItem>
               <NavLink className="scrollto" href="#contact-us">Contáctanos</NavLink>
@@ -117,25 +111,25 @@ const Header = (props) => {
           </Nav>
         </Container>
         :<Container id='mobile-navbar'>
-          <NavbarBrand href="/"><img src='/logo.png' width={50}/><span>AEGIS SYSTEMS</span></NavbarBrand>
+          <NavbarBrand href="/"><img src='/logo.png' width={30}/><span>AEGIS SYSTEMS</span></NavbarBrand>
           <NavbarToggler color='#FFF' onClick={toggle} />
           <Collapse className={isOpen ? 'show' : 'hidden'} navbar>
             <div className="overlay" onClick={toggle}></div>
             <Nav className="me-auto" pills navbar>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink className='scrollto' href="#home">Inicio</NavLink>
-              </NavItem>
+              </NavItem> */}
               <NavItem>
                 <NavLink className="scrollto" href="#about">Quiénes somos</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="scrollto" href="#conocenos">Conocenos</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink className="scrollto" href="#why-us">Por qué nosotros?</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="scrollto" href="#paquetes">Paquetes</NavLink>
+                <NavLink className="scrollto" href="#conocenos">Conocenos</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink className="scrollto" href="#services">Servicios</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink className="scrollto" href="#contact-us">Contáctanos</NavLink>

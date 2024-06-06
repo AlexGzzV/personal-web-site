@@ -4,7 +4,7 @@
 
 .conocenos .card .top-color-background{
   height: 150px;
-  background-color: #37517ed9;
+  background-color: var(--main-bg-color-transparent);
   border-radius: 0.375rem 0.375rem 0 0;
 }
 

@@ -1,0 +1,40 @@
+.services h2{
+  color: white !important;
+}
+
+.services .services-card{
+  background-color: #1f2937;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+}
+
+.services .icon-box {
+  border-radius: 15px;
+}
+
+.services .icon-box .icon {
+  margin-bottom: 10px;
+}
+
+.services .icon-box .icon svg {
+  font-size: 36px;
+  transition: 0.3s;
+}
+
+.services .icon-box h4 {
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.services .icon-box h4 a {
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+
+.services .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #9ca3af;
+}

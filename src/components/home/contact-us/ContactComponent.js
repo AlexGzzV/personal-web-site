@@ -39,8 +39,12 @@ const Contact = (props) => {
                 <Label for="exampleEmail">Correo electrónico</Label>
               </FormGroup>
               <FormGroup floating>
+                <Input type="phone" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Número telefónico" />
+                <Label for="exampleEmail">Número telefónico</Label>
+              </FormGroup>
+              <FormGroup floating>
                 <Input type="textarea" name="message" placeholder="Mensaje" />
-                <Label for="exampleEmail">Mensaje</Label>
+                <Label for="exampleEmail">Descríbenos brevemente tu idea</Label>
               </FormGroup>
               <Input className="btn btn-primary" type="submit" value="Enviar" />
             </form>

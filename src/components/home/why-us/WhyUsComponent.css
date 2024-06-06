@@ -1,12 +1,9 @@
 .why-us .icon-box {
-  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 25px 25px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
   padding: 50px 30px;
   transition: all ease-in-out 0.4s;
   background: #fff;
-}
-
-.why-us .icon-box:hover {
-  transform: translateY(-10px);
 }
 
 .why-us .icon-box .icon {
@@ -14,7 +11,6 @@
 }
 
 .why-us .icon-box .icon svg {
-  color: #47b2e4;
   font-size: 36px;
   transition: 0.3s;
 }
@@ -26,7 +22,7 @@
 }
 
 .why-us .icon-box h4 a {
-  color: #37517e;
+  color: var(--main-heading-color);
   transition: ease-in-out 0.3s;
 }
 

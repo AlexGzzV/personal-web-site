@@ -1,0 +1,64 @@
+.services .card-box {
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 0.4s;
+  background: #fff;
+  width: 100%;
+}
+
+.services .card-box:hover {
+  transform: translateY(-10px);
+}
+
+.services .card-box .header-card{
+  padding: 40px 20px;
+  background-color: var(--main-bg-color-transparent);
+}
+
+.services .card-box h4 {
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+}
+
+.services .card-box h4 a {
+  color: #fff;
+  transition: ease-in-out 0.3s;
+  width: 100%;
+  display: inline-block;
+  text-wrap: wrap;
+}
+
+.services .card-box p {
+  line-height: 24px;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.services .card-box > p{
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.5rem !important;
+  font-weight: bold;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.services .card-box .list-container ul{
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.services .card-box .list-container li{
+  padding: 15px 0;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.services .card-box .list-container ul li p{
+  text-align: center;
+  font-weight: 500;
+}
+
+.services .card-box .list-container ul li p svg{
+  font-size: 1.5rem;
+}
