@@ -5,10 +5,10 @@ import { Icon } from '@iconify/react';
 
 const About = (props) => {
   return(
-    <section id="about" className="about section-bg py-lg-0 mt-5">
+    <section id="about" className="about section-bg py-lg-0 mt-3 mt-lg-5">
       <Container className="px-lg-0" fluid>
-        <Row className="content m-5">
-          <Col className="mx-auto py-5" lg={6}>
+        <Row className="content m-0 m-lg-5 d-flex">
+          <Col className="mx-auto py-0 py-lg-5 mt-5 mt-lg-0 order-1 order-lg-0" lg={6}>
             <div className="section-title">
               <h2>¿QUIÉNES SOMOS?</h2>
             </div>
@@ -25,7 +25,7 @@ const About = (props) => {
               ofreciéndote un servicio personalizado y una experiencia colaborativa que hará que tu proyecto sea tan único como tú.
             </p>
           </Col>
-          <Col className="mx-auto" lg={6}>
+          <Col className="mx-auto order-0 order-lg-1" lg={6}>
             <img src="/images/about-us.jpg" width="100%"/>
           </Col>
         </Row>

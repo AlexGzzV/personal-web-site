@@ -13,7 +13,7 @@ const Services = (props) => {
           <h2>NUESTROS SERVICIOS</h2>
         </div>
         <Row >
-          <Col className="align-items-stretch d-flex" lg={4}>
+          <Col className="align-items-stretch d-flex mt-3 mt-lg-0" lg={4}>
             <div className="services-card">
               <div className="icon-box">
                 <div className="icon"><Icon color="#9ca3af" icon="pajamas:earth" /></div>
@@ -22,7 +22,7 @@ const Services = (props) => {
               </div>
             </div>
           </Col>
-          <Col className="align-items-stretch d-flex" lg={4}>
+          <Col className="align-items-stretch d-flex mt-3 mt-lg-0" lg={4}>
             <div className="services-card">
               <div className="icon-box">
                 <div className="icon"><Icon color="#9ca3af" icon="bi:phone" /></div>
@@ -31,7 +31,7 @@ const Services = (props) => {
               </div>
             </div>
           </Col>
-          <Col className="align-items-stretch d-flex" lg={4}>
+          <Col className="align-items-stretch d-flex mt-3 mt-lg-0" lg={4}>
             <div className="services-card">
               <div className="icon-box">
                 <div className="icon"><Icon color="#9ca3af" icon="material-symbols:code" /></div>

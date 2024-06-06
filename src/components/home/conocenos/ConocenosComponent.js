@@ -13,7 +13,7 @@ const Conocenos = (props) => {
       email: "aleex.vallejo94@gmail.com",
       description: "Desarrollador fullstack .NET y CEO de la empresa. Ha participado y desarrollado multiples proyectos educativos y gubernamentales, teniendo una basta experiencia en software corporativo.",
       jobPosition: "CEO, .NET Developer",
-      image: "/images/1-intro-photo-final.jpg"
+      image: "/images/alex-1.jpg"
     },
     {
       id: 2,
