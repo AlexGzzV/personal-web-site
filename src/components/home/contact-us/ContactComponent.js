@@ -11,6 +11,14 @@ const Contact = (props) => {
     e.preventDefault();
   }
 
+  const handleKeyDown = (e) => {
+    const allowedKeys = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "Backspace"];
+    const length = e.target.value.length;
+    if(!allowedKeys.includes(e.key) || (length >= 10 && e.key != "Backspace")){
+      e.preventDefault();
+    }
+  }
+
   return(
     <section id="contact-us" className="contact-us">
       <Container>
@@ -21,7 +29,6 @@ const Contact = (props) => {
           <Col lg={6}>
            <div>
             <h2>{t("contact-subtitle")}</h2>
-            {/* <p>En AEGIS SYSTEMS, estamos emocionados de saber de ti. Tu visión y tus necesidades son nuestra prioridad, y queremos asegurarnos de que recibas la atención personalizada que mereces.</p> */}
             <p>
             {t("contact-text-1")}
             </p>
@@ -41,11 +48,11 @@ const Contact = (props) => {
                 <Label for="exampleEmail">{t("contact-input-lbl-2")}</Label>
               </FormGroup>
               <FormGroup floating>
-                <Input type="phone" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Número telefónico" />
+                <Input type="phone" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Número telefónico" onKeyDown={handleKeyDown}/>
                 <Label for="exampleEmail">{t("contact-input-lbl-3")}</Label>
               </FormGroup>
               <FormGroup floating>
-                <Input type="textarea" name="message" placeholder="Mensaje" />
+                <Input type="textarea" name="message" placeholder="Mensaje" style={{minHeight: '100px'}}/>
                 <Label for="exampleEmail">{t("contact-input-lbl-4")}</Label>
               </FormGroup>
               <Input className="btn btn-primary" type="submit" value={t("contact-button")} />

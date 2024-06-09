@@ -51,15 +51,27 @@ body:has(#mobile-navbar .navbar-collapse.show){
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+#mobile-navbar a:hover,
+#mobile-navbar .nav-link.active{
+  border: none;
+}
+
+#mobile-navbar .nav-item:has(a:hover),
+#mobile-navbar .nav-item:has(.nav-link.active){
+  border: none;
+  background-color: #3a3b3d;
+  border-radius: 10px;
+}
+
 #mobile-navbar .navbar-collapse{
   display: block;
   position: fixed;
-  top: 54px;
-  padding: 20px 0;
+  top: 0;
+  padding: 60px 0;
   width: 100%;
   height: 100vh;
   transition: left 700ms ease;
-  background-color: var(--main-bg-color-transparent);
+  background-color: #212529;
   width: 60%;
   border: none;
 }
@@ -84,11 +96,12 @@ body:has(#mobile-navbar .navbar-collapse.show){
 
 #mobile-navbar .navbar-collapse ul li{
   padding: 5px 20px;
-  border-bottom: 1px solid white;
+  margin: 5px 10px;
 }
 
 #mobile-navbar .navbar-collapse ul li a{
   text-align: center;
+  border-radius: 0;
 }
 
 #mobile-navbar .navbar-collapse ul li a.active{

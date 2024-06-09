@@ -119,6 +119,7 @@ const Header = (props) => {
               <Select
                 value={language}
                 options={LANGUAGES}
+                isSearchable={false}
                 onChange={handleOnChange}
                 getOptionLabel={e => (
                   <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -158,6 +159,7 @@ const Header = (props) => {
                 <Select
                   value={language}
                   options={LANGUAGES}
+                  isSearchable={false}
                   onChange={handleOnChange}
                   getOptionLabel={e => (
                     <div style={{ display: 'flex', alignItems: 'center' }}>

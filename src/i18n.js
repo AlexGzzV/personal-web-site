@@ -15,7 +15,7 @@ i18n
       en: {
         translation: {
           "header-about": "About us",
-          "header-why-us": "¿Why us?",
+          "header-why-us": "Why us?",
           "header-meet-us": "Meet us",
           "header-services": "Services",
           "header-contact": "Contact us",
@@ -119,7 +119,7 @@ i18n
           "contact-text-4": "AEGIS SYSTEMS - Tu socio en innovación digital.",
           "contact-input-lbl-1": "Nombre completo",
           "contact-input-lbl-2": "Correo electrónico",
-          "contact-input-lbl-3": "Número telefónico",
+          "contact-input-lbl-3": "Número de teléfono",
           "contact-input-lbl-4": "Descríbenos brevemente tu idea",
           "contact-button": "Enviar",
           "footer-section-1-title": "Sección",
