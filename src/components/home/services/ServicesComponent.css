@@ -27,9 +27,10 @@
   font-size: 24px;
 }
 
-.services .icon-box h4 a {
+.services .icon-box h4 span {
   color: white;
   transition: ease-in-out 0.3s;
+  font-size: 1.5rem;
 }
 
 .services .icon-box p {

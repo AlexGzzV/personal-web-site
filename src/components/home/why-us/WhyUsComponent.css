@@ -21,9 +21,10 @@
   font-size: 24px;
 }
 
-.why-us .icon-box h4 a {
+.why-us .icon-box h4 span {
   color: var(--main-heading-color);
   transition: ease-in-out 0.3s;
+  font-size: 1.5rem;
 }
 
 .why-us .icon-box p {

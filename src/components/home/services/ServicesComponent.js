@@ -1,24 +1,26 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./ServicesComponent.css";
-import { GlobalContext } from "../../../context/GlobalContextProvider";
+import { useTranslation } from "react-i18next";
 import { Col, Container, Row } from "reactstrap";
 import { Icon } from '@iconify/react';
 
 const Services = (props) => {
 
+  const { t } = useTranslation();
+
   return(
     <section id="services" className="services" style={{backgroundColor: "var(--bs-gray-900)"}}>
       <Container>
         <div className="section-title">
-          <h2>NUESTROS SERVICIOS</h2>
+          <h2>{t("services-title")}</h2>
         </div>
         <Row >
           <Col className="align-items-stretch d-flex mt-3 mt-lg-0" lg={4}>
             <div className="services-card">
               <div className="icon-box">
                 <div className="icon"><Icon color="#9ca3af" icon="pajamas:earth" /></div>
-                <h4><a href="">Desarrollo Web</a></h4>
-                <p>Creamos sitios web responsivos y fáciles de usar que muestran su marca e involucran a su audiencia.</p>
+                <h4><span>{t("services-card-1-title")}</span></h4>
+                <p>{t("services-card-1-text")}</p>
               </div>
             </div>
           </Col>
@@ -26,8 +28,8 @@ const Services = (props) => {
             <div className="services-card">
               <div className="icon-box">
                 <div className="icon"><Icon color="#9ca3af" icon="bi:phone" /></div>
-                <h4><a href="">Aplicaciones Móbiles</a></h4>
-                <p>Desarrolle aplicaciones móviles de vanguardia que brinden una experiencia de usuario perfecta en plataformas iOS y Android.</p>
+                <h4><span>{t("services-card-2-title")}</span></h4>
+                <p>{t("services-card-2-text")}</p>
               </div>
             </div>
           </Col>
@@ -35,8 +37,8 @@ const Services = (props) => {
             <div className="services-card">
               <div className="icon-box">
                 <div className="icon"><Icon color="#9ca3af" icon="material-symbols:code" /></div>
-                <h4><a href="">Sowftware Personalizado</a></h4>
-                <p>Soluciones de software hechas a medida que abordan sus necesidades comerciales únicas y agilizan sus operaciones.</p>
+                <h4><span>{t("services-card-3-title")}</span></h4>
+                <p>{t("services-card-3-text")}</p>
               </div>
             </div>
           </Col>

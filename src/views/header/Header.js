@@ -11,11 +11,19 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
+import { useTranslation } from "react-i18next";
+import Select from "react-select";
+import { Icon } from '@iconify/react';
+import { LANGUAGES } from '../../constants/Languages';
 
 const Header = (props) => {
 
+  const { i18n, t } = useTranslation();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isOpen, setIsOpen] = useState(false);
+
+  const langCode = window.localStorage.getItem('Language') ?? 'en';
+  const [language, setLanguage] = useState(LANGUAGES.find(l => l.value === langCode));
   const toggle = () => setIsOpen(!isOpen);
 
   const select = (el, all = false) => {
@@ -28,16 +36,11 @@ const Header = (props) => {
   }
 
   useEffect(()=>{
-    /**
-       * Easy on scroll event listener 
-       */
+    
     const onscroll = (el, listener) => {
       el.addEventListener('scroll', listener)
     }
-
-    /**
-     * Navbar links active state on scroll
-     */
+    
     let navbarlinks = select('#navbar .scrollto', true);
     const navbarlinksActive = () => {
       let position = window.scrollY + 57;
@@ -63,8 +66,6 @@ const Header = (props) => {
     onscroll(document, navbarlinksActive);
     window.addEventListener('resize', windowResize);
 
-
-
     return(()=>{
       window.removeEventListener('load', navbarlinksActive);
       document.removeEventListener('scroll', navbarlinksActive);
@@ -83,35 +84,54 @@ const Header = (props) => {
     window.scrollTo(0, scroll - 56);
   }
 
+  const handleOnChange = (lang) => {
+    setLanguage(lang);
+    i18n.changeLanguage(lang.value);
+    window.localStorage.setItem('Language', lang.value);
+  }
+
   return(
     <Navbar id="navbar" {...props} fixed="top">
       {
         (windowWidth >= 900)
         ?<Container id='desktop-navbar'>
           <Nav>
-            <Link to='/' className='navbar-brand me-auto'><img src='/logo.png' width={30}/><span>AEGIS SYSTEMS</span></Link>
+            <Link to='/' className='navbar-brand me-auto'><img src='/logo.png' alt='AEGIS SYSTEMS LOGO' width={30}/><span>AEGIS SYSTEMS</span></Link>
             {/* <NavItem>
               <NavLink className="scrollto" href='#home'>Inicio</NavLink>
             </NavItem> */}
             <NavItem>
-              <NavLink className="scrollto" href="#about">Quiénes somos</NavLink>
+              <NavLink className="scrollto" href="#about">{t("header-about")}</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="scrollto" href="#why-us">¿Por qué nosotros?</NavLink>
+              <NavLink className="scrollto" href="#why-us">{t("header-why-us")}</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="scrollto" href="#conocenos">Conocenos</NavLink>
+              <NavLink className="scrollto" href="#conocenos">{t("header-meet-us")}</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="scrollto" href="#services">Servicios</NavLink>
+              <NavLink className="scrollto" href="#services">{t("header-services")}</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="scrollto" href="#contact-us">Contáctanos</NavLink>
+              <NavLink className="scrollto" href="#contact-us">{t("header-contact")}</NavLink>
+            </NavItem>
+            <NavItem>
+              <Select
+                value={language}
+                options={LANGUAGES}
+                onChange={handleOnChange}
+                getOptionLabel={e => (
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <Icon icon={e.flag} />
+                    <span style={{ marginLeft: 5 }}>{e.label}</span>
+                  </div>
+                )}
+              />
             </NavItem>
           </Nav>
         </Container>
         :<Container id='mobile-navbar'>
-          <NavbarBrand href="/"><img src='/logo.png' width={30}/><span>AEGIS SYSTEMS</span></NavbarBrand>
+          <NavbarBrand href="/"><img src='/logo.png' alt='AEGIS SYSTEMS LOGO' width={30}/><span>AEGIS SYSTEMS</span></NavbarBrand>
           <NavbarToggler color='#FFF' onClick={toggle} />
           <Collapse className={isOpen ? 'show' : 'hidden'} navbar>
             <div className="overlay" onClick={toggle}></div>
@@ -120,19 +140,32 @@ const Header = (props) => {
                 <NavLink className='scrollto' href="#home">Inicio</NavLink>
               </NavItem> */}
               <NavItem>
-                <NavLink className="scrollto" href="#about">Quiénes somos</NavLink>
+                <NavLink className="scrollto" href="#about">{t("header-about")}</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="scrollto" href="#why-us">Por qué nosotros?</NavLink>
+                <NavLink className="scrollto" href="#why-us">{t("header-why-us")}</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="scrollto" href="#conocenos">Conocenos</NavLink>
+                <NavLink className="scrollto" href="#conocenos">{t("header-meet-us")}</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="scrollto" href="#services">Servicios</NavLink>
+                <NavLink className="scrollto" href="#services">{t("header-services")}</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="scrollto" href="#contact-us">Contáctanos</NavLink>
+                <NavLink className="scrollto" href="#contact-us">{t("header-contact")}</NavLink>
+              </NavItem>
+              <NavItem>
+                <Select
+                  value={language}
+                  options={LANGUAGES}
+                  onChange={handleOnChange}
+                  getOptionLabel={e => (
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                      <Icon icon={e.flag} />
+                      <span style={{ marginLeft: 5 }}>{e.label}</span>
+                    </div>
+                  )}
+                />
               </NavItem>
             </Nav>
           </Collapse>
