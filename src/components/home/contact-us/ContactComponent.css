@@ -1,6 +1,7 @@
 .contact-us form .btn{
   background-color: #000;
   border-color: #000;
+  width: 100%;
 }
 
 .contact-us form .btn:active{
@@ -11,4 +12,31 @@
 .contact-us form .btn:focus{
   color: white;
   box-shadow: none;
+}
+
+.contact-us form .spinner-border {
+  width: 20px;
+  height: 20px;
+}
+
+#toast-error {
+  position: fixed;
+  transition: .6s all;
+  width: fit-content;
+  left: auto;
+  right: 10px;
+  top: 80px;
+}
+
+#toast-error.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 576px) {
+  #toast-error {
+    left: auto;
+    right: auto;
+    margin: 0 calc((100vw - (350px)) / 2);
+  }
 }

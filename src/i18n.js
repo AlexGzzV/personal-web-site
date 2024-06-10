@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-const langCode = window.localStorage.getItem('Language') ?? 'en';
+const langCode = window.localStorage.getItem('Language') ?? 'en-US';
 
 i18n
   .use(initReactI18next)
@@ -12,7 +12,7 @@ i18n
       escapeValue: false,
     },
     resources: {
-      en: {
+      "en-US": {
         translation: {
           "header-about": "About us",
           "header-why-us": "Why us?",
@@ -20,10 +20,9 @@ i18n
           "header-services": "Services",
           "header-contact": "Contact us",
           "about-title": "ABOUT US",
-          "about-text-1": "We are a group of young people passionate about technology, united by a common dream: transforming ideas into extraordinary experiences.",
-          "about-text-2": "At AEGIS SYSTEMS, we specialize in developing innovative and customized software, combining creativity and technical expertise to bring your vision to the online world.",
-          "about-text-3": "We not only create software, we also build relationships. We listen carefully to your needs, understand your objectives and work closely with you to ensure that every detail reflects your essence and values. Our commitment is to offer you digital solutions that not only meet, but exceed your expectations.",
-          "about-text-4": "At AEGIS SYSTEMS, innovation and quality are our hallmark. We're here to help you stand out in the digital world, offering you personalized service and a collaborative experience that will make your project as unique as you are.",
+          "about-text-1": "At AEGIS SYSTEMS, we are passionate about creating software solutions that transform ideas into innovative realities. With a team of dedicated experts and a proven track record in the industry, we offer custom software development, technology consulting and comprehensive services that drive our clients' success.",
+          "about-text-2": "Our mission is to simplify technology and make it accessible, ensuring that each project not only meets, but exceeds, expectations. We believe in close collaboration, constant innovation and excellence at every stage of development.",
+          "about-text-3": "Join us to discover how we can take your vision to the next level.",
           "whyus-title": "WHY US?",
           "whyus-subtitle": "At AEGIS SYSTEMS, we know that you have many options when it comes to choosing a team to develop your website. Here we show you why we are the best option for you",
           "whyus-card-1-title": "Passion and Creativity",
@@ -58,11 +57,16 @@ i18n
           "contact-text-2": "Register and complete our contact form. It is easy and fast, and will allow us to offer you the perfect solution, adapted to your objectives.",
           "contact-text-3": "Why wait? Connect with us today and together we will make your ideas a reality.",
           "contact-text-4": "AEGIS SYSTEMS - Your partner in digital innovation.",
-          "contact-input-lbl-1": "Full name",
-          "contact-input-lbl-2": "Email address",
+          "contact-input-lbl-1": "Full name *",
+          "contact-input-lbl-2": "Email address *",
           "contact-input-lbl-3": "Phone number",
-          "contact-input-lbl-4": "Briefly describe your idea",
+          "contact-input-lbl-4": "Briefly describe your idea *",
           "contact-button": "Submit",
+          "contact-modal-header": "Thanks for registering!",
+          "contact-modal-body": "<p>Thank you for filling out the registration form and for your interest in AEGIS SYSTEMS. We have successfully received your information request.</p><p>A member of our team will contact you soon to provide more details and answer any questions.</p><p class='text-danger'>If you can't find our email in your inbox, please check your junk or spam folder.</p>",
+          "contact-modal-button": "Close",
+          "contact-toast-header": "An error has occurred!",
+          "contact-toast-body": "An error occurred while sending your message, please try again.",
           "footer-section-1-title": "Section",
           "footer-section-2-title": "Subscribe to receive new offers.",
           "footer-section-2-subtitle": "Monthly summary of our news.",
@@ -71,7 +75,7 @@ i18n
           "footer-rights": "All rights reserved.",
         },
       },
-      es: {
+      "es-MX": {
         translation: {
           "header-about": "Quiénes somos",
           "header-why-us": "¿Por qué nosotros?",
@@ -79,10 +83,9 @@ i18n
           "header-services": "Servicios",
           "header-contact": "Contáctanos",
           "about-title": "¿QUIENES SOMOS?",
-          "about-text-1": "Somos un grupo de jóvenes apasionados por la tecnología, unidos por un sueño común: transformar ideas en experiencias extraordinarias.",
-          "about-text-2": "En AEGIS SYSTEMS, nos especializamos en el desarrollo de software innovadores y personalizados, combinando creatividad y experiencia técnica para llevar tu visión al mundo en línea.",
-          "about-text-3": "Nosotros no solo creamos software, sino que también construimos relaciones. Escuchamos atentamente tus necesidades, entendemos tus objetivos y trabajamos codo a codo contigo para asegurar que cada detalle refleje tu esencia y valores. Nuestro compromiso es ofrecerte soluciones digitales que no solo cumplan, sino que superen tus expectativas.",
-          "about-text-4": "En AEGIS SYSTEMS, la innovación y la calidad son nuestro sello distintivo. Estamos aquí para ayudarte a destacar en el mundo digital, ofreciéndote un servicio personalizado y una experiencia colaborativa que hará que tu proyecto sea tan único como tú.",
+          "about-text-1": "En AEGIS SYSTEMS, nos apasiona crear soluciones de software que transforman ideas en realidades innovadoras. Con un equipo de expertos dedicados y una trayectoria comprobada en la industria, ofrecemos desarrollo de software a medida, consultoría tecnológica y servicios integrales que impulsan el éxito de nuestros clientes.",
+          "about-text-2": "Nuestra misión es simplificar la tecnología y hacerla accesible, asegurando que cada proyecto no solo cumpla con las expectativas, sino que las supere. Creemos en la colaboración estrecha, la innovación constante y la excelencia en cada etapa del desarrollo.",
+          "about-text-3": "Únete a nosotros para descubrir cómo podemos llevar tu visión al siguiente nivel.",
           "whyus-title": "¿POR QUÉ NOSOTROS?",
           "whyus-subtitle": "En AEGIS SYSTEMS, sabemos que tienes muchas opciones cuando se trata de elegir un equipo para desarrollar tu sitio web. Aquí te mostramos por qué somos la mejor opción para ti",
           "whyus-card-1-title": "Pasión y Creatividad",
@@ -117,11 +120,17 @@ i18n
           "contact-text-2": "Regístrate y completa nuestro formulario de contacto. Es fácil y rápido, y nos permitirá ofrecerte la solución perfecta, adaptada a tus objetivos.",
           "contact-text-3": "¿Por qué esperar? Conéctate con nosotros hoy y juntos haremos realidad tus ideas.",
           "contact-text-4": "AEGIS SYSTEMS - Tu socio en innovación digital.",
-          "contact-input-lbl-1": "Nombre completo",
-          "contact-input-lbl-2": "Correo electrónico",
+          "contact-input-lbl-1": "Nombre completo *",
+          "contact-input-lbl-2": "Correo electrónico *",
           "contact-input-lbl-3": "Número de teléfono",
-          "contact-input-lbl-4": "Descríbenos brevemente tu idea",
+          "contact-input-lbl-4": "Descríbenos brevemente tu idea *",
           "contact-button": "Enviar",
+          "contact-modal-header": "¡Gracias por Registrarte!",
+          "contact-modal-body": "<p>Gracias por llenar el formulario de registro y por tu interés en AEGIS SYSTEMS. Hemos recibido tu solicitud de información correctamente.</p><p>Un miembro de nuestro equipo se pondrá en contacto contigo pronto para brindarte más detalles y responder a cualquier pregunta.</p><p class='text-danger'>Si no encuentras nuestro correo en tu bandeja de entrada, por favor revisa en tu carpeta de correos no deseados o spam.</p>",
+          "contact-modal-button": "Cerrar",
+          "contact-toast-header": "¡Ha ocurrido un error!",
+          "contact-toast-body": "Ha ocurrido un error al enviar su mensaje, por favor intente nuevamente.",
+          "contact-error-modal-button": "Cerrar",
           "footer-section-1-title": "Sección",
           "footer-section-2-title": "Suscríbete para recibir nuevas ofertas.",
           "footer-section-2-subtitle": "Resúmen mensual de nuestras novedades.",

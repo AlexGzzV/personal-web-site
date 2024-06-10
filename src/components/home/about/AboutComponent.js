@@ -22,9 +22,6 @@ const About = (props) => {
             <p>
             {t("about-text-3")}
             </p>
-            <p>
-            {t("about-text-4")}
-            </p>
           </Col>
           <Col className="mx-auto order-0 order-lg-1" lg={6}>
             <img src="/images/about-us.jpg" alt="ABOUT US BANNER" width="100%"/>

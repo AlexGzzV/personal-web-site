@@ -1,5 +1,5 @@
 import './Header.css';
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import {
   Collapse,
@@ -22,7 +22,7 @@ const Header = (props) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isOpen, setIsOpen] = useState(false);
 
-  const langCode = window.localStorage.getItem('Language') ?? 'en';
+  const langCode = window.localStorage.getItem('Language') ?? 'en-US';
   const [language, setLanguage] = useState(LANGUAGES.find(l => l.value === langCode));
   const toggle = () => setIsOpen(!isOpen);
 
@@ -34,6 +34,15 @@ const Header = (props) => {
       return document.querySelector(el)
     }
   }
+
+  useEffect(()=>{
+    const langCodes = ["es-MX", "en-US"];
+    if(!langCodes.includes(langCode)){
+      setLanguage(LANGUAGES.find(l => l.value === 'en-US'));
+      i18n.changeLanguage('en-US');
+      window.localStorage.setItem('Language', 'en-US');
+    }
+  }, [])
 
   useEffect(()=>{
     
