@@ -9,7 +9,7 @@ const ProfileCard = (props) => {
   return(
     <Card>
       <div className="top-color-background"></div>
-      <img src={data.image} alt={`${data.name} ${data.lastName}`}/>
+      <img src={data.image} alt={`Person profile - ${data.name} ${data.lastName}`}/>
       <CardBody>
         <CardTitle tag="h5">{`${data.name} ${data.lastName}`}</CardTitle>
         <CardSubtitle className="mb-2 text-muted" tag="h6">{data.jobPosition}</CardSubtitle>
