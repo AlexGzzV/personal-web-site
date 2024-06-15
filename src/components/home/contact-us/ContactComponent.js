@@ -9,11 +9,13 @@ const Contact = (props) => {
   const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(false);
   const [modal, setModal] = useState(false);
+  const [disabled, setDisabled] = useState(false);
 
   const toggle = () => setModal(!modal);
 
   const handleSubmit = (e) => {
     setIsLoading(true);
+    setDisabled(true);
     e.preventDefault();
     const data = new FormData(e.target);
     const langCode = window.localStorage.getItem('Language') ?? 'en-US';
@@ -22,9 +24,11 @@ const Contact = (props) => {
     .then(response => {
       setModal(!modal);
       setIsLoading(false);
+      setDisabled(false);
     })
     .catch(error => {
       setIsLoading(false);
+      setDisabled(false);
       document.getElementById('toast-error').classList.remove('hidden');
       setTimeout(()=>{
         document.getElementById('toast-error').classList.add('hidden');
@@ -116,7 +120,7 @@ const Contact = (props) => {
                 <Label for="exampleEmail">{t("contact-input-lbl-4")}</Label>
                 <FormFeedback></FormFeedback>
               </FormGroup>
-              <Button className="btn btn-primary" type="submit">{(!isLoading)? <>{t("contact-button")}</> : <Spinner />}</Button>
+              <Button className="btn btn-primary" type="submit" disabled={disabled}>{(!isLoading)? <>{t("contact-button")}</> : <Spinner />}</Button>
             </form>
           </Col>
         </Row>
