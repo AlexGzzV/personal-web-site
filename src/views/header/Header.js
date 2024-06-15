@@ -1,5 +1,6 @@
 import './Header.css';
 import React, { useState, useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import {
   Collapse,
@@ -25,6 +26,12 @@ const Header = (props) => {
   const langCode = window.localStorage.getItem('Language') ?? 'en-US';
   const [language, setLanguage] = useState(LANGUAGES.find(l => l.value === langCode));
   const toggle = () => setIsOpen(!isOpen);
+
+  const { pathname } = useLocation();
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  }, [pathname])
 
   const select = (el, all = false) => {
     el = el.trim()
@@ -105,50 +112,10 @@ const Header = (props) => {
         (windowWidth >= 900)
         ?<Container id='desktop-navbar'>
           <Nav>
-            <Link to='/' className='navbar-brand me-auto'><img src='/logo.png' alt='AEGIS SYSTEMS LOGO' width={30}/><span>AEGIS SYSTEMS</span></Link>
-            {/* <NavItem>
-              <NavLink className="scrollto" href='#home'>Inicio</NavLink>
-            </NavItem> */}
-            <NavItem>
-              <NavLink className="scrollto" href="#about">{t("header-about")}</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink className="scrollto" href="#why-us">{t("header-why-us")}</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink className="scrollto" href="#conocenos">{t("header-meet-us")}</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink className="scrollto" href="#services">{t("header-services")}</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink className="scrollto" href="#contact-us">{t("header-contact")}</NavLink>
-            </NavItem>
-            <NavItem>
-              <Select
-                value={language}
-                options={LANGUAGES}
-                isSearchable={false}
-                onChange={handleOnChange}
-                getOptionLabel={e => (
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <Icon icon={e.flag} />
-                    <span style={{ marginLeft: 5 }}>{e.label}</span>
-                  </div>
-                )}
-              />
-            </NavItem>
-          </Nav>
-        </Container>
-        :<Container id='mobile-navbar'>
-          <NavbarBrand href="/"><img src='/logo.png' alt='AEGIS SYSTEMS LOGO' width={30}/><span>AEGIS SYSTEMS</span></NavbarBrand>
-          <NavbarToggler color='#FFF' onClick={toggle} />
-          <Collapse className={isOpen ? 'show' : 'hidden'} navbar>
-            <div className="overlay" onClick={toggle}></div>
-            <Nav className="me-auto" pills navbar>
-              {/* <NavItem>
-                <NavLink className='scrollto' href="#home">Inicio</NavLink>
-              </NavItem> */}
+            <Link to='/' className='navbar-brand me-auto'><img src='/AEGIS_SYSTEMS_LOGO_sin_fondo.png' alt='AEGIS SYSTEMS LOGO' width={60}/><span>AEGIS SYSTEMS</span></Link>
+            {
+              (!pathname.includes("terminos")) &&
+              <>
               <NavItem>
                 <NavLink className="scrollto" href="#about">{t("header-about")}</NavLink>
               </NavItem>
@@ -178,6 +145,50 @@ const Header = (props) => {
                   )}
                 />
               </NavItem>
+              </>
+            }
+          </Nav>
+        </Container>
+        :<Container id='mobile-navbar'>
+          <NavbarBrand href="/"><img src='/AEGIS_SYSTEMS_LOGO_sin_fondo.png' alt='AEGIS SYSTEMS LOGO' width={50}/><span>AEGIS SYSTEMS</span></NavbarBrand>
+          <NavbarToggler color='#FFF' onClick={toggle} />
+          <Collapse className={isOpen ? 'show' : 'hidden'} navbar>
+            <div className="overlay" onClick={toggle}></div>
+            <Nav className="me-auto" pills navbar>
+              {
+                (!pathname.includes("terminos"))&&
+                <>
+                <NavItem>
+                  <NavLink className="scrollto" href="#about">{t("header-about")}</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="scrollto" href="#why-us">{t("header-why-us")}</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="scrollto" href="#conocenos">{t("header-meet-us")}</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="scrollto" href="#services">{t("header-services")}</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="scrollto" href="#contact-us">{t("header-contact")}</NavLink>
+                </NavItem>
+                <NavItem>
+                  <Select
+                    value={language}
+                    options={LANGUAGES}
+                    isSearchable={false}
+                    onChange={handleOnChange}
+                    getOptionLabel={e => (
+                      <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <Icon icon={e.flag} />
+                        <span style={{ marginLeft: 5 }}>{e.label}</span>
+                      </div>
+                    )}
+                  />
+                </NavItem>
+                </>
+              }
             </Nav>
           </Collapse>
         </Container>

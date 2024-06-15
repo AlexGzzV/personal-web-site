@@ -15,7 +15,7 @@ const Conocenos = (props) => {
       lastName: "González Vallejo",
       email: "aleex.vallejo94@gmail.com",
       description: t("meetus-person-1"),
-      jobPosition: "CEO, .NET Developer",
+      jobPosition: ".NET Developer",
       image: "/images/alex-1.jpg"
     },
     {

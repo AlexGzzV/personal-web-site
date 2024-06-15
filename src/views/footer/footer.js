@@ -2,6 +2,7 @@ import React from "react";
 import "./footer.css";
 import { useTranslation } from "react-i18next";
 import { Button, Col, Container, Row } from "reactstrap";
+import { Link } from "react-router-dom";
 
 const Footer = (props) => {
 
@@ -27,18 +28,19 @@ const Footer = (props) => {
             </ul>
           </Col>
           <Col lg={2} xs={4}>
+
           </Col>
           <Col lg={2} xs={4}>
           </Col>
           <Col className="mt-4 mt-lg-0" lg={6} sm={12}>
-            <form onSubmit={handleSubmit}>
+            {/* <form onSubmit={handleSubmit}>
               <h5>{t("footer-section-2-title")}</h5>
               <p>{t("footer-section-2-subtitle")}</p>
               <div className="d-flex flex-column flex-sm-row w-100 gap-2">
                 <input id="newsletter1" type="text" className="form-control" placeholder={t("footer-section-2-lbl")} />
                 <Button color="primary">{t("footer-section-2-btn")}</Button>
               </div>
-            </form>
+            </form> */}
           </Col>
         </Row>
         <Row>
