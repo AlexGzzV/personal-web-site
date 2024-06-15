@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-const langCode = window.localStorage.getItem('Language') ?? 'en-US';
+const langCode = window.localStorage.getItem('Language') ?? 'es-MX';
 
 i18n
   .use(initReactI18next)
