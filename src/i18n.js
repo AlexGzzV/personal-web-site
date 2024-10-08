@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-const langCode = window.localStorage.getItem('Language') ?? 'es-MX';
+const langCode = window.localStorage.getItem('Language') ?? 'en-US';
 
 i18n
   .use(initReactI18next)
@@ -107,6 +107,7 @@ i18n
           "meetus-person-3": "Ha liderado múltiples proyectos exitosos a lo largo de su carrera. Su habilidad para coordinar equipos, gestionar recursos y asegurar que los plazos y objetivos se cumplan la convierte en una pieza clave de nuestro equipo.",
           "meetus-person-4": "Cuenta con más de 10 años de experiencia en el desarrollo de software, abarcando diversas tecnologías le permiten abordar proyectos complejos y entregar soluciones robustas y eficientes.",
           "meetus-person-5": "Experto en las tecnologías .NET Xamarin y .NET MAUI. A lo largo de su carrera, ha desarrollado múltiples aplicaciones móviles para diversas empresas, destacándose por su capacidad para adaptarse a las necesidades de cada cliente.",
+          "meetus-person-6": "Al chile mejor mañana, me estoy quedando dormido a la verga",
           "services-title": "NUESTROS SERVICIOS",
           "services-card-1-title": "Aplicaciones Web",
           "services-card-1-text": "Creamos sitios web responsivos y fáciles de usar que muestran su marca e involucran a su audiencia.",
