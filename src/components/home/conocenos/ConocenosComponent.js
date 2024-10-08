@@ -54,15 +54,15 @@ const Conocenos = (props) => {
       jobPosition: "Xamarin/MAUI Developer",
       image: "/images/angel-1.jpg"
     },
-    {
-      id: 6,
-      name: "Dorian Karim",
-      lastName: "Mata Garcia",
-      email: "angeleduardo388@gmail.com",
-      description: t("meetus-person-6"),
-      jobPosition: "El gordo Tonny",
-      image: "/images/karim-1.jpg"
-    }
+    // {
+    //   id: 6,
+    //   name: "Dorian Karim",
+    //   lastName: "Mata Garcia",
+    //   email: "angeleduardo388@gmail.com",
+    //   description: t("meetus-person-6"),
+    //   jobPosition: "El gordo Tonny",
+    //   image: "/images/karim-1.jpg"
+    // }
   ]
 
   return(
